@@ -16,18 +16,5 @@ export const checkoutSchema = yup.object().shape({
     .number()
     .typeError("This field is must be numerical")
     .required(requireMessage),
-  cardName: yup.string().required(requireMessage),
-  cardNumber: yup
-    .number()
-    .typeError("This field is must be numerical")
-    .required(requireMessage),
-  expiration: yup
-    .date()
-    .typeError("This field is must be date")
-    .required(requireMessage),
-  cvv: yup
-    .number()
-    .typeError("This field is must be numerical")
-    .required(requireMessage),
 });
 // .typeError('This field is must be numerical')
