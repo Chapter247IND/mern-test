@@ -113,7 +113,7 @@ const Checkout = () => {
                     onChange={handleChange}
                   />
                   {errMessage && errMessage.firstName ? (
-                    <span className='error-message'>
+                    <span className='error-message text-danger'>
                       {errMessage.firstName}
                     </span>
                   ) : null}
@@ -129,7 +129,9 @@ const Checkout = () => {
                     onChange={handleChange}
                   />
                   {errMessage && errMessage.lastName ? (
-                    <span className='error-message'>{errMessage.lastName}</span>
+                    <span className='error-message text-danger'>
+                      {errMessage.lastName}
+                    </span>
                   ) : null}
                 </div>
               </div>
@@ -144,7 +146,9 @@ const Checkout = () => {
                   onChange={handleChange}
                 />
                 {errMessage && errMessage.email ? (
-                  <span className='error-message'>{errMessage.email}</span>
+                  <span className='error-message text-danger'>
+                    {errMessage.email}
+                  </span>
                 ) : null}
               </div>
               <div className='mb-3'>
@@ -158,7 +162,9 @@ const Checkout = () => {
                   onChange={handleChange}
                 />
                 {errMessage && errMessage.address ? (
-                  <span className='error-message'>{errMessage.address}</span>
+                  <span className='error-message text-danger'>
+                    {errMessage.address}
+                  </span>
                 ) : null}
               </div>
               <div className='row'>
@@ -168,13 +174,14 @@ const Checkout = () => {
                     className='custom-select d-block w-100'
                     name='country'
                     value={form.country}
-                    onChange={handleChange}
-                  >
+                    onChange={handleChange}>
                     <option value=''>Choose...</option>
                     <option>United States</option>
                   </select>
                   {errMessage && errMessage.country ? (
-                    <span className='error-message'>{errMessage.country}</span>
+                    <span className='error-message text-danger'>
+                      {errMessage.country}
+                    </span>
                   ) : null}
                 </div>
                 <div className='col-md-4 mb-3'>
@@ -183,13 +190,14 @@ const Checkout = () => {
                     className='custom-select d-block w-100'
                     name='state'
                     value={form.state}
-                    onChange={handleChange}
-                  >
+                    onChange={handleChange}>
                     <option value=''>Choose...</option>
                     <option>California</option>
                   </select>
                   {errMessage && errMessage.state ? (
-                    <span className='error-message'>{errMessage.state}</span>
+                    <span className='error-message text-danger'>
+                      {errMessage.state}
+                    </span>
                   ) : null}
                 </div>
                 <div className='col-md-3 mb-3'>
@@ -203,7 +211,9 @@ const Checkout = () => {
                     onChange={handleChange}
                   />
                   {errMessage && errMessage.zip ? (
-                    <span className='error-message'>{errMessage.zip}</span>
+                    <span className='error-message text-danger'>
+                      {errMessage.zip}
+                    </span>
                   ) : null}
                 </div>
               </div>
@@ -221,7 +231,9 @@ const Checkout = () => {
                     onChange={handleChange}
                   />
                   {errMessage && errMessage.cardName ? (
-                    <span className='error-message'>{errMessage.cardName}</span>
+                    <span className='error-message text-danger'>
+                      {errMessage.cardName}
+                    </span>
                   ) : null}
                 </div>
                 <div className='col-md-6 mb-3'>
@@ -235,7 +247,7 @@ const Checkout = () => {
                     onChange={handleChange}
                   />
                   {errMessage && errMessage.cardNumber ? (
-                    <span className='error-message'>
+                    <span className='error-message text-danger'>
                       {errMessage.cardNumber}
                     </span>
                   ) : null}
@@ -253,7 +265,7 @@ const Checkout = () => {
                     onChange={handleChange}
                   />
                   {errMessage && errMessage.expiration ? (
-                    <span className='error-message'>
+                    <span className='error-message text-danger'>
                       {errMessage.expiration}
                     </span>
                   ) : null}
@@ -269,15 +281,16 @@ const Checkout = () => {
                     onChange={handleChange}
                   />
                   {errMessage && errMessage.cvv ? (
-                    <span className='error-message'>{errMessage.cvv}</span>
+                    <span className='error-message text-danger'>
+                      {errMessage.cvv}
+                    </span>
                   ) : null}
                 </div>
               </div>
               <hr className='mb-4' />
               <button
                 className='btn btn-primary btn-lg btn-block'
-                type='submit'
-              >
+                type='submit'>
                 Continue to checkout
               </button>
             </form>
