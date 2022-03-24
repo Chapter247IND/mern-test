@@ -1,0 +1,32 @@
+version: "3"
+services:
+  backend:
+    build: ./api
+    image: test-backend:latest
+    ports:
+      - "8000:8000"
+  frontend:
+    build: ./ui
+    image: test-ui:latest
+    ports:
+      - "8001:80"
+
+  mongodb:
+    image: mongo:latest
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+    environment:
+      - PUID=1000
+      - PGID=1000
+    ports:
+      - "27017"
+    container_name: mongodb
+    volumes:
+      - mongodb:/data/db
+    networks:
+      - test-network
+
+networks:
+  test-network:
+    driver: bridge
