@@ -5,6 +5,8 @@ services:
     image: test-backend:latest
     ports:
       - "8000:8000"
+    networks:
+      - test-network
   frontend:
     build: ./ui
     image: test-ui:latest
@@ -30,3 +32,6 @@ services:
 networks:
   test-network:
     driver: bridge
+
+volumes:
+  mongodb:
